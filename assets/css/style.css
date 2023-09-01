@@ -1,0 +1,729 @@
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+#topheader {
+    top: 0px;
+    height: 94px;
+    position: sticky;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    width: 196px;
+    height: 44px;
+}
+
+.logo {
+    float: left;
+}
+
+.menu {
+    float: right;
+}
+
+.menu_items li {
+    list-style: none;
+    float: left;
+    padding: 10px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.menu_items li a {
+    text-decoration: none;
+    color: black;
+}
+
+.down-btn{
+    margin-left: 5px;
+    width: 30px;
+}
+
+.dropdown-item {
+    display: none;
+    position: absolute;
+    background-color: #1da5d4;
+}
+
+.dropdown-item li {
+    padding: 10px 30px;
+    margin: 0;
+}
+
+.dropdown-item li a {
+    color: white;
+    font-size: 16px;
+}
+
+.dropdown:hover .dropdown-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-item li:hover{
+    background-color: #2f589b;
+}
+
+.btn_primary {
+    padding-top: 10px;
+    background-color: #2f589b;
+    color: white;
+}
+
+.container {
+    max-width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: auto;
+}
+
+.menu .menu_items a.active{
+    color: #0dcaf0;
+}
+
+.menu .menu_items li:hover a{
+    color: #0dcaf0;
+}
+
+.menu .menu_items li:hover .dropdown-item a{
+    color: white;
+}
+
+/* body */
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+font {
+    font-family: 'Lugrasimo', cursive;
+}
+
+.vid {
+    height: 500px;
+    max-width: 100%;
+    position: relative;
+}
+
+.vid .meta-vid {
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+    object-fit: cover;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.text-over-vid {
+    color: white;
+    padding: 100px 70px 0px;
+}
+
+.text-over-vid h1 {
+    position: relative;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+span.font {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.text-over-vid p {
+    position: relative;
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: 400;
+
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.book {
+    position: relative;
+    margin: 70px;
+
+    animation-name: fadeInRight;
+    animation-duration: 1s;
+    animation-timing-function: 1;
+}
+
+.book a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+
+    font-size: 20px;
+    background-color: #1ec0ec;
+
+    padding: 25px 40px;
+}
+
+.btn-arrow {
+    position: absolute;
+    top: 20px;
+    left: 360px;
+    background: #fff url(../img/btn-arrow.png) no-repeat center center;
+
+    width: 61px;
+    height: 35px
+}
+
+.whoarewe {
+    width: 100%;
+    overflow: auto;
+    background-color: #fff;
+}
+
+.imgsec {
+    max-width: 50%;
+    float: left;
+}
+
+.dot {
+    position: absolute;
+    z-index: -1;
+    padding: 0px 150px 0px;
+}
+
+.overlap {
+    margin: 150px 70px 0px;
+}
+
+.textsec {
+    max-width: 50%;
+    padding: 150px 70px 0px;
+    float: left;
+    margin-bottom: 150px;
+}
+
+.textsec h1 {
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 40px;
+    color: #2f589b;
+}
+
+.textsec p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+.read-more {
+    position: relative;
+    max-width: 150px;
+}
+
+.read-more a {
+    text-decoration: none;
+}
+
+.read-more p {
+    max-width: 150px;
+}
+
+.blue-arrow-img {
+    display: block;
+    height: 9px;
+    width: 118px;
+    background: url(../img/blue-arrow.png) no-repeat center center;
+}
+
+.whatwedo {
+    width: 100%;
+    background-color: #2f589b;
+    padding-bottom: 185px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centercolor {
+    display: block;
+    height: 3px;
+    width: 300px;
+    background-color: #1da5d4;
+}
+
+.whatwedo h2 {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 135px 0px 45px 0px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.whatwedo p {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+p.desc {
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.whatwedo-card {
+    width: 322px;
+    height: 322px;
+    background-color: #1da5d4;
+    margin: 30px 15px 0px;
+}
+
+.back {
+    position: absolute;
+    display: none;
+}
+
+.whatwedo-card:hover {
+    position: relative;
+    top: -20px;
+    transition: top 0.5s;
+}
+
+.whatwedo-card:hover .back {
+    display: block;
+}
+
+.front-text {
+    width: 322px;
+    height: 322px;
+    padding: 20px;
+    position: absolute;
+}
+
+.whatwedo-card:hover .front-text {
+    background-color: rgba(0, 0, 155, 0.5);
+}
+
+.whatwedo .whatwedo-card p {
+    text-align: left;
+}
+
+p.increased-font {
+    font-size: 20px;
+    height: 46px;
+    margin-top: 30px;
+}
+
+.margin {
+    margin: 20px 0px 80px 0px;
+}
+
+.read-more p {
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.happyclient {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-bottom: #2f589b solid 2px;
+}
+
+.client {
+    font-size: 50px;
+    color: #2f589b;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 30px 0px;
+    margin-bottom: 90px;
+}
+
+.client-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.republic-bank {
+    display: block;
+    height: 150px;
+    width: 300px;
+    background: url(../img/first-republic-bank.png) no-repeat center center;
+}
+
+.chevron {
+    display: block;
+    height: 150px;
+    width: 300px;
+    background: url(../img/chevron.png) no-repeat center center;
+}
+
+.ggvs {
+    display: block;
+    height: 150px;
+    width: 300px;
+    background: url(../img/ggvs.png) no-repeat center center;
+}
+
+.visa {
+    display: block;
+    height: 150px;
+    width: 300px;
+    background: url(../img/visa.png) no-repeat center center;
+}
+
+.detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.card {
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 75px;
+    font-weight: 700;
+    padding: 30px 0px 0px;
+}
+
+.blue h3 {
+    color: #1da5d4;
+}
+
+.red h3 {
+    color: #e74c3c;
+}
+
+.dark-blue h3 {
+    color: #2f589b;
+}
+
+span.grey {
+    color: #666666;
+}
+
+.card p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.welcome {
+    width: 650px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.blogs {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    margin: 30px 0px;
+}
+
+.imagesec {
+    margin: 80px 0px;
+    width: 50%;
+    position: relative;
+    float: left;
+}
+
+.blogg {
+    padding-left: 73px;
+}
+
+.dot-image {
+    z-index: -1;
+    position: absolute;
+    width: 306px;
+    height: 402px;
+    top: -20px;
+    left: 320px;
+}
+
+.txtsec {
+    width: 50%;
+    float: left;
+    padding-left: 20px;
+    margin: 30px 0px;
+}
+
+.txtsec h6 {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 0px;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.text-part {
+    padding-left: 20px;
+}
+
+.text-part a {
+    text-decoration: none;
+    color: #2f589b;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f7fb;
+    padding: 50px 0px;
+    color: #666666;
+}
+
+.icon-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    padding-bottom: 50px;
+}
+
+@keyframes fadeInUp {
+    0% {
+        top: -50px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        left: -50px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        left: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shiftRight {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 50px;
+    }
+}
+
+/* footer */
+.main_footer {
+    background-color: #2f589b;
+    overflow: auto;
+    width: 100%;
+}
+
+.div25 {
+    /* background-color: aliceblue; */
+    width: 25%;
+    float: left;
+    overflow: auto;
+}
+
+.div50 {
+    /* background-color: beige; */
+    width: 50%;
+    float: left;
+    overflow: auto;
+    display: inline;
+}
+
+.pb-40 {
+    color: #c5cfdb;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 40px 0 40px 0;
+    ;
+}
+
+.list_unstyled li a {
+    text-decoration: none;
+    color: #1ec0ec;
+    font-size: 17px;
+    font-weight: 10;
+}
+
+.list_unstyled li {
+    list-style: none;
+    padding: 7px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.vr {
+    border-right: 1px solid #1ec0ec;
+    padding-left: 50px;
+}
+
+.div50 p {
+    padding-left: 10px;
+    color: #c5cfdb;
+}
+
+.link {
+    color: #1ec0ec;
+    text-decoration: underline;
+}
+
+.mail {
+    background: url(../img/mail.png) no-repeat;
+}
+
+.heading {
+    font-size: 18px;
+}
+
+.usa-flag {
+    background: url(../img/usa-flag.png) no-repeat;
+}
+
+.india-flag {
+    margin-left: 40px;
+    background: url(../img/indian-flag.png) no-repeat;
+}
+
+.nepal-flag {
+    background: url(../img/nepal-flag.png) no-repeat;
+}
+
+.social {
+    min-width: 50%;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+i {
+    padding: 10px;
+    color: #0dcaf0;
+    font-size: 35px;
+}
+
+.images {
+    width: 100%;
+    overflow: auto;
+    padding: 30px;
+    display: flex;
+}
+
+.copyright-block {
+    display: flex;
+    max-height: 42px;
+}
+
+.metahorizon {
+    opacity: 0.6;
+    padding-right: 2rem;
+    border-right: 1px solid #1ec0ec;
+}
+
+.copyright {
+    padding-left: 0.5rem;
+    width: 70%;
+    color: white;
+}
+
+a {
+    color: #1ec0ec;
+}
+
+.comp-logo {
+    margin: auto;
+    display: flex;
+    filter: brightness(0) invert(1);
+    opacity: 0.6;
+}
+
+.logo-comp {
+    max-height: 42px;
+    padding-left: 2rem;
+}
